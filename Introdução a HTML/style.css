@@ -79,6 +79,7 @@ color: #505050
 .cabeca {
     border-radius: 50%;
     align-content: center;
+    border-right: 6px solid #505050;
    
 }
 
