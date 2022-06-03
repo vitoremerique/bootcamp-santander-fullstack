@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos justify-content</title>
+    <style>
+
+        .flex-conteiner{
+            border: 2px solid gray;
+            display: flex;
+            max-width: 500px;
+            font-size: 15px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .flex-item{
+            background-color: rgb(112, 46, 219);
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: rgb(38, 219, 14);
+            margin: 10px;
+
+
+        }
+
+        .flex-start{
+            justify-content: flex-start;
+        }
+        .flex-end{
+            justify-content: flex-end
+        }
+
+        .flex-center{
+            justify-content: center;
+        }
+        .space-between{
+            justify-content: space-between;
+        }
+
+        .space-around{
+            justify-content: space-around;
+        }
+
+        .cor{
+            background-color: blue;
+        }
+
+        .column{
+            flex-direction: column;
+            min-height: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Row</h1>
+    <p>Flex-start</p>
+     <section class="flex-conteiner flex-start">
+         <div class="flex-item">1</div>
+         <div class="flex-item">item 2</div>
+         <div class="flex-item">outro item</div>
+         
+     </section>
+     <p>Flex-end</p>
+     <section class="flex-conteiner c flex-end">
+        <div class="flex-item">1</div>
+        <div class="flex-item">item 2</div>
+        <div class="flex-item">outro item</div>
+        
+    </section>
+
+    <p>justify-content: center</p>
+    <section class="flex-conteiner  flex-center">
+        <div class="flex-item">1</div>
+        <div class="flex-item">item 2</div>
+        <div class="flex-item">outro item</div>
+        
+    </section>
+
+
+    <p>justify-content: space-between</p>
+    <section class="flex-conteiner  space-between">
+        <div class="flex-item">1</div>
+        <div class="flex-item">item 2</div>
+        <div class="flex-item">outro item</div>
+        
+    </section>
+
+    <p>justify-content: space-around</p>
+    <section class="flex-conteiner  space-around">
+        <div class="flex-item">1</div>
+        <div class="flex-item">item 2</div>
+        <div class="flex-item">outro item</div>   
+    </section>
+
+    <h1>Column</h1>
+
+    <p>Flex-start(column)</p>
+     <section class="flex-conteiner flex-start column">
+         <div class="flex-item">1</div>
+         <div class="flex-item">item 2</div>
+         <div class="flex-item">outro item</div>
+         
+     </section>
+
+     <p>Flex-end(column)</p>
+     <section class="flex-conteiner flex-end column">
+         <div class="flex-item">1</div>
+         <div class="flex-item">item 2</div>
+         <div class="flex-item">outro item</div>
+         
+     </section>
+
+     <p>Center</p>
+     <section class="flex-conteiner flex-center column">
+         <div class="flex-item">1</div>
+         <div class="flex-item">item 2</div>
+         <div class="flex-item">outro item</div>
+         
+     </section>
+
+     <p>space-between</p>
+     <section class="flex-conteiner space-between column">
+         <div class="flex-item">1</div>
+         <div class="flex-item">item 2</div>
+         <div class="flex-item">outro item</div>
+         
+     </section>
+
+     <p>space-around</p>
+     <section class="flex-conteiner space-around column">
+         <div class="flex-item">1</div>
+         <div class="flex-item">item 2</div>
+         <div class="flex-item">outro item</div>
+         <div class="flex-item">1</div>
+         <div class="flex-item">item 2</div>
+         <div class="flex-item">outro item</div>
+         
+     </section>
+
+
+</body>
+</html>
