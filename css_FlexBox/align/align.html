@@ -1,175 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamentos align</title>
+    <title>Fundamentos align-content</title>
 
-<style>
+    <style>
+        .flex-conteiner {
+            max-width: 300px;
+            height: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid black;
+        }
 
-    .flex-conteiner{
-        display:flex;
-        border: 2px solid black;
-        max-width: 350px;
+        .flex-item {
+            background-color: orange;
+            padding: 0 5px;
+            flex: 1;
+            text-align: center;
+            color: white;
+            margin: 3px
+        }
+        .center{
+            align-content: center;
+        }
 
-    }
+        .stretch{
+            align-content: stretch;
+        }
+        .start{
+            align-content: flex-start;
+        }
 
-    .flex-item{
-        background-color: blueviolet;
-        margin: 5px;
-        color: bisque;
-        text-align: center;
-        
-        flex: 1;
-    }
-
-   
-
-   .center{
-       align-items: center;
-   }
-
-   .stretch{
-       align-items: stretch;
-   }
-
-    .start {
-        align-items: flex-start;
-    }
-
-    .end{
-        align-items: flex-end;
-    }
-    .direction{
-        flex-direction: column;
-    }
-    .baseline{
-        align-items: baseline;
-    }
-</style>
+        .end{
+            align-content: flex-end;
+        }
+        .space-around{
+            align-content:space-around;
+        }
+        .space-between{
+            align-content: space-between;
+        }
+    </style>
 
 
 </head>
+
 <body>
-<h1>Row</h1>
-    <p>align-items: center</p>
-    <section class="flex-conteiner center">
-        <div class="flex-item">item aaawdsawd1aaaaaa</div>
-        <div class="flex-item">vgfhsbvhfsbdf2ssssssssss</div>
-        <div class="flex-item">item 3</div>
-    </section>
 
-    <p>align-items: stretch</p>
-    <section class="flex-conteiner  center stretch">
-        <div class="flex-item">item aaawdsawd1aaa</div>
-        <div class="flex-item">vgfhsbvh dsfrew</div>
-        <div class="flex-item">item Ela era bruxa, ele era um lobo.
-            Ambos prontos para amar.
-            Ela tão clara, ele tão escuro.
-            </div>
-       
-    </section>
-
-    <p>flex-start</p>
-    <section class="flex-conteiner  center start">
-        <div class="flex-item">item aaawdsawd1aaa</div>
-        <div class="flex-item">vgfhsbvh dsfrew</div>
-        <div class="flex-item">item Ela era bruxa, ele era um lobo.
-            Ambos prontos para amar.
-            Ela tão clara, ele tão escuro.
-            
-            </div>
-       
-    </section>
-
-    <p>flex-end</p>
-    <section class="flex-conteiner  center end">
-        <div class="flex-item">item aaawdsawd1aaa</div>
-        <div class="flex-item">vgfhsbvh dsfrew</div>
-        <div class="flex-item">item Ela era bruxa, ele era um lobo.
-            Ambos prontos para amar.
-            Ela tão clara, ele tão escuro.
-            
-            </div>
-       
-    </section>
-
-    <p>baseline</p>
-    <section class="flex-conteiner  center baseline">
-        <div class="flex-item">item aaawdsawd1aaa</div>
-        <div class="flex-item">vgfhsbvh dsfrew</div>
-        <div class="flex-item">item Ela era bruxa, ele era um lobo.
-            Ambos prontos para amar.
-            Ela tão clara, ele tão escuro.
-            
-            </div>
-       
-    </section>
-
-
-    <h1>Column</h1>
-    <p>align-items: center</p>
-    <section class="flex-conteiner center direction">
-        <div class="flex-item">item aaawdsawd1aaaaaa</div>
-        <div class="flex-item">vgfhsbvhfsbdf2ssssssssss</div>
-        <div class="flex-item">item 3</div>
-    </section>
-
-    <p>align-items: stretch</p>
-    <section class="flex-conteiner  center stretch direction">
-        <div class="flex-item">item aaawdsawd1aaa</div>
-        <div class="flex-item">vgfhsbvh dsfrew</div>
-        <div class="flex-item">item Ela era bruxa, ele era um lobo.
-            Ambos prontos para amar.
-            Ela tão clara, ele tão escuro.
-            item Ela era bruxa, ele era um lobo.
-            Ambos prontos para amar.
-            Ela tão clara, ele tão escuro.
-            </div>
-       
-    </section>
-
-</section>
-
-<p>flex-start</p>
-<section class="flex-conteiner  center start direction">
-    <div class="flex-item">item aaawdsawd1aaa</div>
-    <div class="flex-item">vgfhsbvh dsfrew</div>
-    <div class="flex-item">item Ela era bruxa, ele era um lobo.
+    <p>Stretch</p>
+    <div class="flex-conteiner stretch">
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
+        Ambos prontos para amar.</div>
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
+        Ambos prontos para amar.</div>
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
         Ambos prontos para amar.
         Ela tão clara, ele tão escuro.
         
-        </div>
-   
-</section>
+       
+       </div>
+    <div class="flex-item">Presente em nossa mente
+        Pois eles sabem que tudo terá seu lugar,
+        Sua data marcada, sua hora exata.
+       </div>
+    <div class="flex-item">A vida e o destino num mesmo amor.
+        E quando o impossível tornar-se possível
+       
+      </div>
+    <div class="flex-item">Ele corria, e ela fugia.
+        A noite ele aparecia com seu uivo dolorido.
+        E ela surgia a iluminar a noite com o luar.
+        A bruxa era vida e o Lobo o destino.
+     </div>
+    </div>
 
-</section>
-
-<p>flex-end</p>
-<section class="flex-conteiner  center end direction">
-    <div class="flex-item">item aaawdsawd1aaa</div>
-    <div class="flex-item">vgfhsbvh dsfrew</div>
-    <div class="flex-item">item Ela era bruxa, ele era um lobo.
+    <p>Center</p>
+    <div class="flex-conteiner center">
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
+        Ambos prontos para amar.</div>
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
+        Ambos prontos para amar.</div>
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
         Ambos prontos para amar.
         Ela tão clara, ele tão escuro.
         
-        </div>
-   
-</section>
-
-<p>baseline</p>
-    <section class="flex-conteiner  center baseline direction">
-        <div class="flex-item">item aaawdsawd1aaa</div>
-        <div class="flex-item">vgfhsbvh dsfrew</div>
-        <div class="flex-item">item Ela era bruxa, ele era um lobo.
-            Ambos prontos para amar.
-            Ela tão clara, ele tão escuro.
-            
-            </div>
        
-    </section>
-    
-    
+       </div>
+    <div class="flex-item">Presente em nossa mente
+        Pois eles sabem que tudo terá seu lugar,
+        Sua data marcada, sua hora exata.
+       </div>
+    <div class="flex-item">A vida e o destino num mesmo amor.
+        E quando o impossível tornar-se possível
+       
+      </div>
+    <div class="flex-item">Ele corria, e ela fugia.
+        A noite ele aparecia com seu uivo dolorido.
+        E ela surgia a iluminar a noite com o luar.
+        A bruxa era vida e o Lobo o destino.
+     </div>
+    </div>
+
+    <p>Flex-start</p>
+    <div class="flex-conteiner start">
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
+        Ambos prontos para amar.</div>
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
+        Ambos prontos para amar.</div>
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
+        Ambos prontos para amar.
+        Ela tão clara, ele tão escuro.
+        
+       
+       </div>
+    <div class="flex-item">Presente em nossa mente
+        Pois eles sabem que tudo terá seu lugar,
+        Sua data marcada, sua hora exata.
+       </div>
+    <div class="flex-item">A vida e o destino num mesmo amor.
+        E quando o impossível tornar-se possível
+       
+      </div>
+    <div class="flex-item">Ele corria, e ela fugia.
+        A noite ele aparecia com seu uivo dolorido.
+        E ela surgia a iluminar a noite com o luar.
+        A bruxa era vida e o Lobo o destino.
+     </div>
+    </div>
+
+    <p>Flex-end</p>
+    <div class="flex-conteiner end">
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
+        Ambos prontos para amar.</div>
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
+        Ambos prontos para amar.</div>
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
+        Ambos prontos para amar.
+        Ela tão clara, ele tão escuro.
+        
+       
+       </div>
+    <div class="flex-item">Presente em nossa mente
+        Pois eles sabem que tudo terá seu lugar,
+        Sua data marcada, sua hora exata.
+       </div>
+    <div class="flex-item">A vida e o destino num mesmo amor.
+        E quando o impossível tornar-se possível
+       
+      </div>
+    <div class="flex-item">Ele corria, e ela fugia.
+        A noite ele aparecia com seu uivo dolorido.
+        E ela surgia a iluminar a noite com o luar.
+        A bruxa era vida e o Lobo o destino.
+     </div>
+    </div>
+
+    <p>Space-around</p>
+    <div class="flex-conteiner space-around">
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
+        Ambos prontos para amar.</div>
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
+        Ambos prontos para amar.</div>
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
+        Ambos prontos para amar.
+        Ela tão clara, ele tão escuro.
+        
+       
+       </div>
+    <div class="flex-item">Presente em nossa mente
+        Pois eles sabem que tudo terá seu lugar,
+        Sua data marcada, sua hora exata.
+       </div>
+    <div class="flex-item">A vida e o destino num mesmo amor.
+        E quando o impossível tornar-se possível
+       
+      </div>
+    <div class="flex-item">Ele corria, e ela fugia.
+        A noite ele aparecia com seu uivo dolorido.
+        E ela surgia a iluminar a noite com o luar.
+        A bruxa era vida e o Lobo o destino.
+     </div>
+    </div>
+
+    <p>Space-between</p>
+    <div class="flex-conteiner space-between">
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
+        Ambos prontos para amar.</div>
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
+        Ambos prontos para amar.</div>
+    <div class="flex-item">Ela era bruxa, ele era um lobo.
+        Ambos prontos para amar.
+        Ela tão clara, ele tão escuro.
+        
+       
+       </div>
+    <div class="flex-item">Presente em nossa mente
+        Pois eles sabem que tudo terá seu lugar,
+        Sua data marcada, sua hora exata.
+       </div>
+    <div class="flex-item">A vida e o destino num mesmo amor.
+        E quando o impossível tornar-se possível
+       
+      </div>
+    <div class="flex-item">Ele corria, e ela fugia.
+        A noite ele aparecia com seu uivo dolorido.
+        E ela surgia a iluminar a noite com o luar.
+        A bruxa era vida e o Lobo o destino.
+     </div>
+    </div>
 </body>
+
 </html>
