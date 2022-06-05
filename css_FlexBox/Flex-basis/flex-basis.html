@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos flex-basis</title>
+    <style>
+        .conteiner{
+            max-width: 500px;
+            border: 1px solid black;
+            display:flex;
+        }
+
+        .item{
+            background-color: coral;
+            color: white;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .bauto{
+            flex-basis: auto;
+        }
+        .b-0{
+            flex-basis: 0;
+        }
+
+        .flex-grow{
+            flex-grow: 1;
+        }
+        .f-g2{
+            flex-grow: 2;
+        }
+
+        .flex-wrip{
+            flex-wrap: wrap;
+        }
+
+        .w100{
+            flex-basis: 100px;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <h1>auto</h1>
+    <div class="conteiner">
+        <div class="item bauto flex-grow ">A</div>
+        <div class="item bauto flex-grow">BVF</div>
+        <div class="item bauto flex-grow ">CSDF</div>
+        <div class="item bauto flex-grow ">DDSS</div>
+    </div>
+
+    <h1>zero</h1>
+    <div class="conteiner ">
+        <div class="item b-0 f-g2 ">A</div>
+        <div class="item b-0 f-g2">BVwefdwfwfwwdfw</div>
+        <div class="item b-0 f-g2 ">CSDF</div>
+        <div class="item b-0 f-g2 ">DDSS</div>
+    </div>
+
+    <h1>basis + width</h1>
+    <div class="conteiner flex-wrip f">
+        <div class="item w100 f-g2 ">A</div>
+        <div class="item w100 f-g2">BVwefdw</div>
+        <div class="item w100 f-g2">CSDF</div>
+        <div class="item w100 f-g2">DDSS</div>
+        <div class="item w100 f-g2">CSDF</div>
+        <div class="item w100 f-g2">DDSS</div>
+        <div class="item w100 f-g2">BVwefdw</div>
+        <div class="item w100 f-g2">CSDF</div>
+        <div class="item w100 f-g2">DDSS</div>
+        <div class="item w100 f-g2">CSDF</div>
+        <div class="item w100 f-g2">DDSS</div>
+    </div>
+
+
+
+</body>
+</html>
