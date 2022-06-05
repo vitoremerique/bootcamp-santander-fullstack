@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos flex-shrink</title>
+
+    <style>
+        .conteiner{
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+            margin-bottom: 15px;
+        }
+
+        .item{
+            margin: 5px;
+            background-color: orangered;
+            font-size: 24px;
+            text-align: center;
+           }
+
+        .flex-skrink-1{
+            flex-shrink: 1;
+        }
+
+        .flex-skrink-0{
+            flex-shrink: 1;
+            flex-basis: 100px;
+        }
+
+        .flex-skrink-2{
+            flex-shrink: 2;
+            flex-basis: 100px;
+           
+        }
+        .flex-skrink-3{
+            flex-shrink: 3;
+            flex-basis: 100px;
+           
+        }
+        .flex-grow-1{
+            flex-grow: 1;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Flex-shrink: 1</h1>
+    <div class="conteiner">
+        <div class="item flex-skrink-1 flex-grow-1">A</div>
+        <div class="item flex-skrink-1 flex-grow-1">B</div>
+        <div class="item flex-skrink-1 flex-grow-1">C</div>
+        <div class="item flex-skrink-1 flex-grow-1">D</div>
+        <div class="item flex-skrink-1 flex-grow-1">E</div>
+        
+    </div>
+
+    
+    <div class="conteiner">
+        <div class="item flex-skrink-1 flex-grow-1">A</div>
+        <div class="item flex-skrink-1 flex-grow-1">B</div>
+        
+        <div class="item flex-skrink-1 flex-grow-1">Eu sou sonhador forte </div>
+        <div class="item flex-skrink-1 flex-grow-1">D</div>
+        
+        
+    </div>
+
+    <h1>Flex-shrink: 0  and flex-basis:100px</h1>
+    <div class="conteiner">
+        <div class="item flex-skrink-0 flex-grow-1">A</div>
+        <div class="item flex-skrink-0 flex-grow-1">B</div>
+        <div class="item flex-skrink-0 flex-grow-1">Eu sou sonhador desenvolvedor de css </div>
+        <div class="item flex-skrink-0 flex-grow-1">D</div>
+        <div class="item flex-skrink-0 flex-grow-1">E</div>
+        
+        
+    </div>
+
+    <h1>Flex-shrink: mix  and flex-basis:100px</h1>
+    <div class="conteiner">
+        <div class="item flex-skrink-2 flex-grow-1">A</div>
+        <div class="item flex-skrink-1 flex-grow-1">B</div>
+    
+        <div class="item flex-skrink-1 flex-grow-1">Eu sou sonhador forte </div>
+        <div class="item flex-skrink-2 flex-grow-1">D</div>
+        
+        
+        
+    </div>
+
+</body>
+</html>
