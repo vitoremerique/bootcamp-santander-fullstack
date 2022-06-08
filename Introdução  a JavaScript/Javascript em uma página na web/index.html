@@ -5,11 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/script.js"></script>
+    
 
     <title>Javascript em uma página web</title>
 </head>
 <body>
-     <h1>Olá ,mundo!!</h1>
+     
+    <header class="flex-conteiner">
+        <div class="texto">
+        <h1>Contador</h1>
+        </div>
+
+
+        <div id="botao">
+            
+            <button name="subtrair" onclick="decrement()">-</button>
+            <span id="prox_numero">0</span>
+            <button name="adicionar" onclick="increment()">+</button>
+
+        </div>
+
+
+    </header>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
