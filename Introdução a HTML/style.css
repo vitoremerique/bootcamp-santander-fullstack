@@ -25,9 +25,17 @@ a{
  text-align: center;
 }
 
+.cabeca {
+    align-content: center;
+    border-radius: 50%;
+    border-right: 6px solid #505050;
+    
+   
+}
 
 #title, .subtitle,.post_title {
 color: #505050
+
 }
 
 .post_title{
@@ -76,12 +84,6 @@ color: #505050
 }
 
 
-.cabeca {
-    border-radius: 50%;
-    align-content: center;
-    border-right: 6px solid #505050;
-   
-}
 
 .imagem{
     margin-bottom: 15px;
@@ -105,5 +107,9 @@ color: #505050
     
 }
 .contact_list{
+    text-align: center;
+}
+
+div{
     text-align: center;
 }
