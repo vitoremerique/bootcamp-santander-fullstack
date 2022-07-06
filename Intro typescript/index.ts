@@ -1,7 +1,7 @@
-const input = document.getElementById('input')as HTMLInputElement;
+//Generic types
 
-input.addEventListener('input',(event)=>{
- console.log('digitei');
- const i = event.currentTarget as HTMLInputElement;
- console.log(i.value)
-});
+function adicionaApendiceAListaarray(array,value){
+    return array.map(array=>array+ value);
+}
+
+console.log(adicionaApendiceAListaarray([1,2,3,4],2))
