@@ -1,0 +1,19 @@
+body{
+    width: 1000px;
+    height: 100px;
+    justify-content: center;
+}
+
+footer ul  {
+    
+    margin-top: 950px;
+    font-size: 25px;
+    border-top: 1px solid coral;
+    text-align: center;
+    list-style-type:none;
+    
+}
+
+.para{
+    text-align: center;
+}
