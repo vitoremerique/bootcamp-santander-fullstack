@@ -1,7 +1,15 @@
-//Generic types
-
-function adicionaApendiceAListaarray(array,value){
-    return array.map(array=>array+ value);
+interface IUsuario {
+    id: string;
+    email:string;
 }
 
-console.log(adicionaApendiceAListaarray([1,2,3,4],2))
+interface IAdmin extends IUsuario{
+    cargo: 'gerente' | 'coordenador' | 'supervisor'
+}
+
+function redirecione(usuario: IUsuario|IAdmin){
+    if('cargo' in usuario){
+        //redirecionar para a área de administração
+    }
+    //redirecionar para a área do usuário
+}
