@@ -1,13 +1,11 @@
-interface IUsuario {
-    id: string;
-    email:string;
-    cargo?: 'gerente' | 'coordenador' | 'supervisor'
-
+interface Cachorro {
+    nome: string;
+    idade: number;
+    parqueFavorito?: string;
 }
 
-function redirecione(usuario: IUsuario){
-    if(usuario.cargo){
-        //redirecionar para a área de administração
-    }
-    //redirecionar para a área do usuário
+const meuCachorro: Cachorro = {
+ nome: 'Apolo',
+ idade: 14,
+ 
 }
