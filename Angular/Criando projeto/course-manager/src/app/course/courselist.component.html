@@ -23,8 +23,8 @@
             <td><img src="{{Course.imageUrl}}" alt="{{Course.name}}" width='60' heigth='60'></td>
             <td>{{Course.name}}</td>
             <td>{{Course.price}}</td>
-            <td>{{Course.code}}</td>
-            <td>{{Course.releaseDate}}</td>   
+            <td>{{Course.code | lowercase | replace:'-':' '}}</td>
+            <td>{{Course.releaseDate | date:'dd/MM/yyyy'}}</td>   
             <td> 
                 {{Course.rating}}
                 <app-star [rating]="Course.rating"></app-star>
